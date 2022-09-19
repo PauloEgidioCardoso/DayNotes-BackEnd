@@ -12,7 +12,7 @@ module.exports = {
     async update(request, response) {
         const { id } = request.params;
 
-        const annotation = await Annotations.findOne({ id: id });
+        const annotation = await Annotations.findOne({_id: id});
 
         if (annotation.priority) {
             annotation.priority = false;
